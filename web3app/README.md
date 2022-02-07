@@ -42,3 +42,13 @@ npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
 
 <!-- Read -->
+
+contracts => files in solidity, which contains a code to intact with blockchain
+Scripts => to deploy to blockchain
+
+hardhat.config => paths => to create a artifacts to get access by react
+
+waffle => automation in testing
+ether => interact with smart contact
+
+smartContact => with randomness using chainLink VRF

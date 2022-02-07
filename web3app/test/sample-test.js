@@ -1,19 +1,20 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy("Hello, world!");
-    await greeter.deployed();
+describe("MyNFT", function () {
+  it("Should mint and transfer an NFT to someone", async function () {
+    const WeirdFaces = await ethers.getContractFactory("WeirdFaces");
+    const weirdfaces = await WeirdFaces.deploy();
+    await weirdfaces.deployed();
 
-    expect(await greeter.greet()).to.equal("Hello, world!");
+    const recipient = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
+    const metadataURI = "cid/test.svg";
 
-    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
+    let balance = await weirdfaces.balanceOf(recipient);
+    except(balance).to.equal(0);
 
-    // wait until the transaction is mined
-    await setGreetingTx.wait();
-
-    expect(await greeter.greet()).to.equal("Hola, mundo!");
+    const newlyMintedToken = await firedguys.payToMint(recipient, metadataURI, {
+      value: ethers.utils.parseEther("0.01"),
+    });
   });
 });
