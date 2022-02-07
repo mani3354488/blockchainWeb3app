@@ -94,7 +94,7 @@ function createImage(idx) {
     const meta = {
       name,
       description: `A drawing of ${name.split("-").join(" ")}`,
-      image: `${idx}.png`,
+      image: `ipfs://YOUR_ASSET_CDI`,
       attributes: [
         {
           element: "",
