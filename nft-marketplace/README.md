@@ -40,3 +40,8 @@ Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_
 ```shell
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
+
+<!-- Changes in hardhat.config file -->
+
+Get Your Private Key from Infura and store it in .env file
+Get your Metamask wallet private key and store it in .secret file
